@@ -3,10 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "npm-run-all clean --parallel lib:watch showcase:start-waiton",
+    "build": "run-s lib:build showcase:build",
+    "test": "run-p lib:test showcase:test",
+    "lib:build": "ng build @makino-software/design-system",
+    "lib:watch": "ng build @makino-software/design-system --watch --configuration development",
+    "lib:test": "ng test @makino-software/design-system",
+    "showcase:start-waiton": "wait-on dist/makino-software/design-system/package.json && npm run showcase:start",
+    "showcase:start": "ng serve showcase",
+    "showcase:build": "ng build showcase",
+    "showcase:watch": "ng build showcase --watch --configuration development",
+    "showcase:test": "ng test showcase",
+    "clean": "rimraf dist"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +42,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.3.0",
-    "typescript": "~5.4.2"
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.4.2",
+    "wait-on": "^8.0.1"
   }
 }

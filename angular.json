@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@makino-software/design-system": {
+      "projectType": "library",
+      "root": "projects/makino-software/design-system",
+      "sourceRoot": "projects/makino-software/design-system/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/makino-software/design-system/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/makino-software/design-system/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/makino-software/design-system/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/makino-software/design-system/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }

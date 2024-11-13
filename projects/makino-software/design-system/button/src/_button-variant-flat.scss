@@ -1,0 +1,60 @@
+@mixin generate-button-flat($color, $active, $hover, $border) {
+  background: $color;
+  border: 1px solid $color;
+  box-shadow: none;
+  color: var(--iic-button-primary-color-default);
+  filter: none;
+  transition:
+    background 0.3s,
+    border 0.3s,
+    color 0.3s;
+
+  &:active {
+    background: $active;
+    border-color: $active;
+  }
+
+  &:hover {
+    background: $hover;
+  }
+
+  &:disabled {
+    background: var(--iic-button-default-background-disabled);
+    border-color: var(--iic-button-default-background-disabled);
+    color: var(--iic-text-default-color-disabled);
+    cursor: not-allowed;
+  }
+}
+
+@mixin generate-flat-buttons {
+  &.flat {
+    &.blank {
+      @include generate-button-flat(var(--iic-button-blank-background-default),
+        var(--iic-button-blank-background-active),
+        var(--iic-button-blank-background-hover),
+        solid);
+      color: var(--iic-text-default-color-default);
+    }
+
+    &.default {
+      @include generate-button-flat(var(--iic-button-default-background-default),
+        var(--iic-button-default-background-active),
+        var(--iic-button-default-background-hover),
+        solid);
+    }
+
+    &.primary {
+      @include generate-button-flat(var(--iic-button-primary-background-default),
+        var(--iic-button-primary-background-active),
+        var(--iic-button-primary-background-hover),
+        solid);
+    }
+
+    &.secondary {
+      @include generate-button-flat(var(--iic-button-secondary-background-default),
+        var(--iic-button-secondary-background-active),
+        var(--iic-button-secondary-background-hover),
+        solid);
+    }
+  }
+}

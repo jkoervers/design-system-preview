@@ -1,0 +1,66 @@
+@mixin generate-button-outlined($color, $active, $hover, $border) {
+  background: (--iic-button-blank-background-default);
+  border: 1px $border $color;
+  box-shadow: none;
+  color: $color;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border 0.3s;
+
+  &:active {
+    background: $active;
+    border-color: $active;
+    box-shadow: none; // TODO @julia check if necessary
+  }
+
+  &:hover {
+    background: $hover;
+    color: var(--iic-text-default-color-invert);
+  }
+
+  &:disabled {
+    background: var(--iic-button-default-background-disabled);
+    border-color: var(--iic-button-default-background-disabled);
+    box-shadow: none; // TODO @julia check if necessary
+    color: var(--iic-text-default-color-disabled);
+    cursor: not-allowed;
+  }
+}
+
+@mixin generate-outlined-buttons {
+  &.outlined {
+    &.blank {
+      @include generate-button-outlined(var(--iic-button-blank-background-default),
+        var(--iic-button-blank-background-active),
+        var(--iic-button-blank-background-hover), solid);
+      border: 1px solid var(--iic-button-default-background-disabled);
+      color: var(--iic-text-default-color-default);
+
+      // &:hover {
+      //   background: var(--button-blank-background-hover, #DBDBDB);
+      // }
+    }
+
+    &.default {
+      @include generate-button-outlined(var(--iic-button-default-background-default),
+        var(--iic-button-default-background-active),
+        var(--iic-button-default-background-hover),
+        solid);
+    }
+
+    &.primary {
+      @include generate-button-outlined(var(--iic-button-primary-background-default),
+        var(--iic-button-primary-background-active),
+        var(--iic-button-primary-background-hover),
+        solid);
+    }
+
+    &.secondary {
+      @include generate-button-outlined(var(--iic-button-secondary-background-default),
+        var(--iic-button-secondary-background-active),
+        var(--iic-button-secondary-background-hover),
+        solid);
+    }
+  }
+}

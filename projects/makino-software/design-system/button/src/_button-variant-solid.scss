@@ -1,0 +1,53 @@
+@mixin generate-button-solid($color, $active, $hover) {
+  background: $color;
+  border: 1px solid $color;
+
+  &:active {
+    background: $active;
+    border: 1px solid $active;
+    box-shadow: none;
+  }
+
+  &:hover {
+    background: $hover;
+    border: 1px solid $hover;
+  }
+
+  &:disabled {
+    background: var(--iic-button-default-background-disabled);
+    border-color: var(--iic-button-default-background-disabled);
+    box-shadow: none;
+    color: var(--iic-text-default-color-disabled);
+    cursor: not-allowed;
+  }
+
+}
+
+@mixin generate-solid-buttons {
+  &.solid {
+    &.blank {
+      @include generate-button-solid(var(--iic-button-blank-background-default),
+        var(--iic-button-blank-background-active),
+        var(--iic-button-blank-background-hover));
+      color: var(--iic-text-default-color-default);
+    }
+
+    &.default {
+      @include generate-button-solid(var(--iic-button-default-background-default),
+        var(--iic-button-default-background-active),
+        var(--iic-button-default-background-hover));
+    }
+
+    &.primary {
+      @include generate-button-solid(var(--iic-button-primary-background-default),
+        var(--iic-button-primary-background-active),
+        var(--iic-button-primary-background-hover));
+    }
+
+    &.secondary {
+      @include generate-button-solid(var(--iic-button-secondary-background-default),
+        var(--iic-button-secondary-background-active),
+        var(--iic-button-secondary-background-hover));
+    }
+  }
+}

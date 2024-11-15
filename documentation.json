@@ -1,0 +1,220 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ButtonComponent>",
+                "defaultValue": "{\n  component: ButtonComponent,\n  title: 'Components/Button',\n  tags: ['autodocs'],\n  argTypes: {\n    color: {\n      options: ['default', 'blank', 'primary', 'secondary'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'default' },\n      },\n    },\n    variant: {\n      options: ['solid', 'outlined', 'flat'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'solid' },\n      },\n    },\n  },\n  render: ({ ...args }) => ({\n    props: args,\n    template: `\n      <button iic-button ${argsToTemplate(args)}>\n        Click me\n      </button>`,\n  }),\n}"
+            },
+            {
+                "name": "parameters",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Parameters",
+                "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Button'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<ButtonComponent>",
+                "defaultValue": "{\n  name: 'Primary Button',\n  args: {\n    color: 'primary',\n    variant: 'solid',\n  },\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    ...Primary.args,\n    color: 'secondary',\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ButtonComponent>",
+                "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/makino-software/design-system/button/src/button.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ButtonComponent>",
+                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'Components/Button',\n  tags: ['autodocs'],\n  argTypes: {\n    color: {\n      options: ['default', 'blank', 'primary', 'secondary'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'default' },\n      },\n    },\n    variant: {\n      options: ['solid', 'outlined', 'flat'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'solid' },\n      },\n    },\n  },\n  render: ({ ...args }) => ({\n    props: args,\n    template: `\n      <button iic-button ${argsToTemplate(args)}>\n        Click me\n      </button>`,\n  }),\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<ButtonComponent>",
+                    "defaultValue": "{\n  name: 'Primary Button',\n  args: {\n    color: 'primary',\n    variant: 'solid',\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    ...Primary.args,\n    color: 'secondary',\n  },\n}"
+                }
+            ],
+            "projects/makino-software/design-system/.storybook/preview.ts": [
+                {
+                    "name": "parameters",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Parameters",
+                    "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Button'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+                },
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/makino-software/design-system/button/src/button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ButtonComponent>",
+                    "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/makino-software/design-system/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "parameters",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

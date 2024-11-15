@@ -1,5 +1,5 @@
 @mixin generate-button-outlined($color, $active, $hover, $border) {
-  background: (--iic-button-blank-background-default);
+  background: inherit;
   border: 1px $border $color;
   box-shadow: none;
   color: $color;

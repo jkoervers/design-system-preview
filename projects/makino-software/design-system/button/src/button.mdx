@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import * as ButtonStories from "./button.stories";
+
+# Button Component
+
+[Source code](https://github.com/MakinoMachine/X03500UICL/tree/main/projects/makino-software/design-system/button)
+&nbsp;|&nbsp;
+[Figma reference](https://www.figma.com/design/nI8zohmPpS3dTG5YX7Ua5b/Design-System?node-id=146-5154&node-type=frame&t=rRJh90vYBV9z1IWG-0)
+&nbsp;|&nbsp;
+[Usage guidelines](#usage-guidelines)
+
+<Meta of={ButtonStories} name="Overview" />
+
+<Canvas>
+  <Story of={ButtonStories.Default} />
+</Canvas>
+
+## Getting started
+
+You can implement the button component by importing the `ButtonComponent` into the NgModule or standalone component of you angular app.
+
+```html
+import { ButtonComponent } from "@makino-software/design-system/button";
+```
+
+The button has no required attribute. The default values are automatically set and can be seen in the _Component API_ section in the _Default_ table column.
+You can also optionally configure the color or variant of button by specifying a `color` or `variant` attribute on the button. The available values are displayed in the in the _Control_ column in the _Component API_ table.
+
+To see how to integrate the button component click on _Show code_ in the fist canvas at the top of the page.
+
+## Usage guidelines
+
+Avoid using the button as a link and vice-versa. It is a good idea to provide semantic labels, that give the user an idea of the action behind the button. Try to be more specific than `New` or `Save`,
+e.g. try using `Create new item` or `Update item`.
+
+## Component API
+
+<Controls />

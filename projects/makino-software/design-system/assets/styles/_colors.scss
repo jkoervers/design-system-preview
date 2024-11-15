@@ -1,0 +1,277 @@
+html {
+    // brand
+    --iic-brand-primary-color-default: #2F8ECA;
+    --iic-brand-error-color-default: #DE3431;
+
+    // sidenav
+    --iic-icon-button-hover: #5DA5D0;
+    --iic-sidenav-background: #2A8DCA;
+    --iic-sidenav-border: #ffffff26;
+    --iic-sidenav-color: #FFF;
+    --iic-sidenav-shadow: 0px 0px 10px 0px rgba(48, 72, 152, 0.25);
+    --iic-sidenav-dialog-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    --iic-sidenav-toggle-button: #569FCC;
+    --iic-sidenav-itemlist-background: #117ABA;
+    --iic-sidenav-itemlist-border: #569FCC;
+    --iic-sidenav-item-color: #FFF;
+    --iic-sidenav-item-indicator: #FFF;
+    --iic-sidenav-item-active: #2887C1;
+    --iic-sidenav-item-hover: #2887C1;
+    --iic-sidenav-subitem-active: #5DA5D0;
+    --iic-sidenav-subitem-hover: #5DA5D0;
+    --iic-sidenav-footer-dialog-background: #2887C1;
+    --iic-sidenav-footer-link-active: #5DA5D0;
+    --iic-sidenav-footer-link-hover: #5DA5D0;
+
+    //card
+    --iic-card-primary-background-default: #FFF;
+
+    //dialog
+    --iic-dialog-primary-background-default: #FFF;
+
+    // tab
+    --iic-tab-primary-background-default: #FFF;
+    --iic-tab-indicator-primary-background-default: #2F8ECA;
+    --iic-tab-indicator-primary-background-hover: #47A3DE;
+    --iic-tab-indicator-primary-background-active: #2F8ECA;
+
+    // text
+    --iic-text-primary-color-default: #2F8ECA;
+    --iic-text-primary-color-focus: #167FC2;
+    --iic-text-default-color-default: #000;
+    --iic-text-default-color-invert: #FFF;
+    --iic-text-default-color-disabled: #BEBEC4;
+    --iic-text-error-color-default: #DE3431;
+
+    // breadcrumb
+    --iic-breadcrumb-default-background-default: #FFF;
+
+    /*
+     * button
+     */
+
+    // default
+    --iic-button-default-background-default: #999999;
+    --iic-button-default-background-active: #{darken(#999999, 10%)};
+    --iic-button-default-background-hover: #{lighten(#999999, 10%)};
+    --iic-button-default-background-disabled: #DBDBDB;
+    // blank
+    --iic-button-blank-background-default: #FFF;
+    --iic-button-blank-background-active: #{darken(#FFF, 10%)};
+    --iic-button-blank-background-hover: #{lighten(#FFF, 10%)};
+    // primary
+    --iic-button-primary-background-default: #2F8ECA;
+    --iic-button-primary-background-active: #{darken(#2F8ECA, 10%)};
+    --iic-button-primary-background-hover: #{lighten(#2F8ECA, 10%)};
+    --iic-button-primary-color-default: #FFF;
+    // secondary
+    --iic-button-secondary-background-default: #F38826;
+    --iic-button-secondary-background-active: #{darken(#F38826, 10%)};
+    --iic-button-secondary-background-hover: #{lighten(#F38826, 10%)};
+    // toggle
+    --iic-toggle-button-default-background-default: #FFF;
+
+
+    // input
+    --iic-input-default-border-default: #000;
+    --iic-input-default-border-focus: #2F8ECA;
+    --iic-input-default-color-focus: #2F8ECA;
+    --iic-input-error-border-default: #DE3431;
+    --iic-input-error-color-default: #DE3431;
+    --iic-input-default-background-default: #FFF;
+    --iic-input-default-background-disabled: #DBDBDB;
+    --iic-input-default-border-disabled: #DBDBDB;
+
+    // select
+    --iic-select-default-background-default: #FFF;
+    --iic-select-indicator-default-backgorund-default: #2F8ECA;
+    --iic-select-option-default-background-default: #FFF;
+    --iic-select-option-default-background-hover: #E0EEF7;
+
+    .light,
+    .light-medium-contrast,
+    .light-high-contrast {
+
+        // brand
+        --iic-brand-primary-color-default: #2F8ECA;
+        --iic-brand-error-color-default: #DE3431;
+
+        // sidenav
+        --iic-icon-button-hover: #5DA5D0;
+        --iic-icon-button-focus: #117ABA;
+        --iic-sidenav-background: #2A8DCA;
+        --iic-sidenav-border: #ffffff26;
+        --iic-sidenav-color: #FFF;
+        --iic-sidenav-shadow: 0px 0px 10px 0px rgba(48, 72, 152, 0.25);
+        --iic-sidenav-dialog-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        --iic-sidenav-toggle-button: #569FCC;
+        --iic-sidenav-itemlist-background: #117ABA;
+        --iic-sidenav-itemlist-border: #569FCC;
+        --iic-sidenav-item-color: #FFF;
+        --iic-sidenav-item-indicator: #FFF;
+        --iic-sidenav-item-active: #2887C1;
+        --iic-sidenav-item-hover: #2887C1;
+        --iic-sidenav-subitem-active: #5DA5D0;
+        --iic-sidenav-subitem-hover: #5DA5D0;
+        --iic-sidenav-footer-dialog-background: #2887C1;
+        --iic-sidenav-footer-link-active: #5DA5D0;
+        --iic-sidenav-footer-link-hover: #5DA5D0;
+
+        // card
+        --iic-card-primary-background-default: #FFF;
+
+        // dialog
+        --iic-dialog-primary-background-default: #FFF;
+
+        // tab
+        --iic-tab-primary-background-default: #FFF;
+        --iic-tab-indicator-primary-background-default: #2F8ECA;
+        --iic-tab-indicator-primary-background-hover: #47A3DE;
+        --iic-tab-indicator-primary-background-active: #2F8ECA;
+
+        // text
+        --iic-text-primary-color-default: #2F8ECA;
+        --iic-text-primary-color-focus: #167FC2;
+        --iic-text-default-color-default: #000;
+        --iic-text-default-color-invert: #FFF;
+        --iic-text-default-color-disabled: #BEBEC4;
+        --iic-text-error-color-default: #DE3431;
+
+        // breadcrumb
+        --iic-breadcrumb-default-background-default: #FFF;
+
+        /*
+         * button
+         */
+
+        // default
+        --iic-button-default-background-default: #999999;
+        --iic-button-default-background-active: #{darken(#999999, 10%)};
+        --iic-button-default-background-hover: #{lighten(#999999, 10%)};
+        --iic-button-default-background-disabled: #DBDBDB;
+        // blank
+        --iic-button-blank-background-default: #FFF;
+        --iic-button-blank-background-active: #{darken(#FFF, 10%)};
+        --iic-button-blank-background-hover: #{lighten(#FFF, 10%)};
+        // primary
+        --iic-button-primary-background-default: #2F8ECA;
+        --iic-button-primary-background-active: #{darken(#2F8ECA, 10%)};
+        --iic-button-primary-background-hover: #{lighten(#2F8ECA, 10%)};
+        --iic-button-primary-color-default: #FFF;
+        // secondary
+        --iic-button-secondary-background-default: #F38826;
+        --iic-button-secondary-background-active: #{darken(#F38826, 10%)};
+        --iic-button-secondary-background-hover: #{lighten(#F38826, 10%)};
+        // toggle
+        --iic-toggle-button-default-background-default: #FFF;
+
+        // input
+        --iic-input-default-border-default: #000;
+        --iic-input-default-border-focus: #2F8ECA;
+        --iic-input-default-color-focus: #2F8ECA;
+        --iic-input-error-border-default: #DE3431;
+        --iic-input-error-color-default: #DE3431;
+        --iic-input-default-background-default: #FFF;
+        --iic-input-default-background-disabled: #DBDBDB;
+        --iic-input-default-border-disabled: #DBDBDB;
+
+        // select
+        --iic-select-default-background-default: #FFF;
+        --iic-select-indicator-default-backgorund-default: #2F8ECA;
+        --iic-select-option-default-background-default: #FFF;
+        --iic-select-option-default-background-hover: #E0EEF7;
+    }
+
+    .dark,
+    .dark-medium-contrast,
+    .dark-high-contrast {
+
+        // brand
+        --iic-brand-primary-color-default: #2F8ECA;
+        --iic-brand-error-color-default: #DE3431;
+
+        //sidenav
+        --iic-icon-button-hover: #3b4964;
+        --iic-sidenav-background: #293346;
+        --iic-sidenav-border: #ffffff26;
+        --iic-sidenav-color: #FFF;
+        --iic-sidenav-shadow: none;
+        --iic-sidenav-dialog-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        --iic-sidenav-toggle-button: #2e384b;
+        --iic-sidenav-itemlist-background: #232b3b;
+        --iic-sidenav-itemlist-border: #465163;
+        --iic-sidenav-item-color: #FFF;
+        --iic-sidenav-item-indicator: #FFF;
+        --iic-sidenav-item-active: #293346;
+        --iic-sidenav-item-hover: #293346;
+        --iic-sidenav-subitem-active: #3b4964;
+        --iic-sidenav-subitem-hover: #3b4964;
+        --iic-sidenav-footer-dialog-background: #293346;
+        --iic-sidenav-footer-link-active: #3b4964;
+        --iic-sidenav-footer-link-hover: #3b4964;
+
+        // card
+        --iic-card-primary-background-default: #2C303A;
+
+        // dialog
+        --iic-dialog-primary-background-default: #2C303A;
+
+        // tab
+        --iic-tab-primary-background-default: #2C303A;
+        --iic-tab-indicator-primary-background-default: #2F8ECA;
+        --iic-tab-indicator-primary-background-hover: #47A3DE;
+        --iic-tab-indicator-primary-background-active: #2F8ECA;
+
+        // text
+        --iic-text-default-color-default: #FFF;
+        --iic-text-default-color-invert: #000;
+        --iic-text-default-color-disabled: #BEBEC4;
+        --iic-text-primary-color-default: #2F8ECA;
+        --iic-text-primary-color-focus: #167FC2;
+        --iic-text-error-color-default: #DE3431;
+
+        // breadcrumb
+        --iic-breadcrumb-default-background-default: #2C303A;
+
+        // input
+        --iic-input-default-border-default: #FFF;
+        --iic-input-default-border-focus: #2F8ECA;
+        --iic-input-default-color-focus: #2F8ECA;
+        --iic-input-error-border-default: #DE3431;
+        --iic-input-error-color-default: #DE3431;
+        --iic-input-default-background-default: #2C303A;
+        --iic-input-default-background-disabled: #DBDBDB;
+        --iic-input-default-border-disabled: #DBDBDB;
+
+        // select
+        --iic-select-default-background-default: #2C303A;
+        --iic-select-indicator-default-backgorund-default: #2F8ECA;
+        --iic-select-option-default-background-default: #2C303A;
+        --iic-select-option-default-background-hover: #3f4e6c;
+
+        /*
+         * button
+         */
+
+        // default
+        --iic-button-default-background-default: #999999;
+        --iic-button-default-background-active: #{darken(#999999, 10%)};
+        --iic-button-default-background-hover: #{lighten(#999999, 10%)};
+        --iic-button-default-background-disabled: #DBDBDB;
+        // blank
+        --iic-button-blank-background-default: #21242C;
+        --iic-button-blank-background-active: #{darken(#21242C, 10%)};
+        --iic-button-blank-background-hover: #{lighten(#21242C, 10%)};
+        // primary
+        --iic-button-primary-background-default: #2F8ECA;
+        --iic-button-primary-background-active: #{darken(#2F8ECA, 10%)};
+        --iic-button-primary-background-hover: #{lighten(#2F8ECA, 10%)};
+        --iic-button-primary-color-default: #FFF;
+        // secondary
+        --iic-button-secondary-background-default: #F38826;
+        --iic-button-secondary-background-active: #{darken(#F38826, 10%)};
+        --iic-button-secondary-background-hover: #{lighten(#F38826, 10%)};
+        // toggle
+        --iic-toggle-button-default-background-default: #2C303A;
+    }
+}

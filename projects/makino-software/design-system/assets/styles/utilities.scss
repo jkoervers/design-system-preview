@@ -1,0 +1,200 @@
+/**
+ * alignment
+ */
+
+.content-center {
+    align-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/**
+ * flex
+ */
+
+.flex-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-m, 16px);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m, 16px);
+}
+
+
+/**
+ * grid
+ */
+
+.row {
+    display: grid;
+    grid-gap: var(--spacing-m, 16px);
+    grid-template-columns: repeat(12, 1fr);
+}
+
+$cols: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+);
+
+@each $value in $cols {
+    .col-#{$value} {
+        grid-column: span $value;
+    }
+}
+
+/**
+ * opacity
+ */
+
+$opacity: (
+    '10': 0.1,
+    '20': 0.2,
+    '30': 0.3,
+    '40': 0.4,
+    '50': 0.5,
+    '60': 0.6,
+    '70': 0.7,
+    '80': 0.8,
+    '90': 0.9,
+    '100': 1,
+);
+
+@each $key, $value in $opacity {
+    .o-#{$key} {
+        opacity: $value !important;
+    }
+}
+
+/**
+ * spacing
+ */
+
+$spacing: (
+    '0': 0px,
+    'xs': 4px,
+    's': 8px,
+    'sm': 12px,
+    'm': 16px,
+    'ml': 24px,
+    'l': 32px,
+    'xl': 64px,
+);
+
+@each $key, $value in $spacing {
+    .m-#{$key} {
+        margin: $value !important;
+    }
+
+    .ml-#{$key} {
+        margin-left: $value !important;
+    }
+
+    .mt-#{$key} {
+        margin-top: $value !important;
+    }
+
+    .mr-#{$key} {
+        margin-right: $value !important;
+    }
+
+    .mb-#{$key} {
+        margin-bottom: $value !important;
+    }
+
+    .p-#{$key} {
+        padding: $value !important;
+    }
+
+    .pl-#{$key} {
+        padding-left: $value !important;
+    }
+
+    .pt-#{$key} {
+        padding-top: $value !important;
+    }
+
+    .pr-#{$key} {
+        padding-right: $value !important;
+    }
+
+    .pb-#{$key} {
+        padding-bottom: $value !important;
+    }
+}
+
+/**
+ * width
+ */
+
+$width: (
+    '20': 20%,
+    '25': 25%,
+    '50': 50%,
+    '75': 75%,
+    '100': 100%,
+    'fit': fit-content,
+);
+
+@each $key, $value in $width {
+    .w-#{$key} {
+        width: $value !important;
+    }
+}
+
+/**
+ * height
+ */
+
+$height: (
+    '20': 20%,
+    '25': 25%,
+    '50': 50%,
+    '75': 75%,
+    '100': 100%,
+);
+
+@each $key, $value in $height {
+    .h-#{$key} {
+        height: $value !important;
+    }
+}
+
+/**
+ * color
+ */
+.primary-text {
+    color: var(--iic-text-primary-color-default);
+}
+
+.primary-bg {
+    color: var(--iic-brand-primary-color-default);
+}
+
+.error-text {
+    color: var(--iic-text-error-color-default);
+}
+
+.error-bg {
+    color: var(--iic-brand-error-color-default);
+}

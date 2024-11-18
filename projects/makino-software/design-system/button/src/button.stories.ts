@@ -34,7 +34,7 @@ const meta: Meta<ButtonComponent> = {
 export default meta;
 type Story = StoryObj<ButtonComponent>;
 
-export const Primary: StoryObj<ButtonComponent> = {
+export const Primary: Story = {
   name: 'Primary Button',
   args: {
     color: 'primary',

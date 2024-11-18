@@ -21,6 +21,16 @@
                 "defaultValue": "{\n  component: ButtonComponent,\n  title: 'Components/Button',\n  tags: ['autodocs'],\n  argTypes: {\n    color: {\n      options: ['default', 'blank', 'primary', 'secondary'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'default' },\n      },\n    },\n    variant: {\n      options: ['solid', 'outlined', 'flat'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'solid' },\n      },\n    },\n  },\n  render: ({ ...args }) => ({\n    props: args,\n    template: `\n      <button iic-button ${argsToTemplate(args)}>\n        Click me\n      </button>`,\n  }),\n}"
             },
             {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<InputComponent>",
+                "defaultValue": "{\n  component: InputComponent,\n  title: 'Components/Input',\n  tags: ['autodocs'],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n      table: {\n        defaultValue: { summary: 'Enter value' },\n      },\n    },\n  },\n  // render: ({ ...args }) => ({\n  //   props: args,\n  //   template: `\n  //     <iic-input label='Label' placeholder='Placeholder'}></iic-input>`,\n  // }),\n}"
+            },
+            {
                 "name": "parameters",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -47,8 +57,18 @@
                 "file": "projects/makino-software/design-system/button/src/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "StoryObj<ButtonComponent>",
+                "type": "Story",
                 "defaultValue": "{\n  name: 'Primary Button',\n  args: {\n    color: 'primary',\n    variant: 'solid',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Primary Input',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
             },
             {
                 "name": "Secondary",
@@ -69,6 +89,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponent>",
                 "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<InputComponent>",
+                "file": "projects/makino-software/design-system/input/src/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -95,7 +126,7 @@
                     "file": "projects/makino-software/design-system/button/src/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "StoryObj<ButtonComponent>",
+                    "type": "Story",
                     "defaultValue": "{\n  name: 'Primary Button',\n  args: {\n    color: 'primary',\n    variant: 'solid',\n  },\n}"
                 },
                 {
@@ -107,6 +138,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n  args: {\n    ...Primary.args,\n    color: 'secondary',\n  },\n}"
+                }
+            ],
+            "projects/makino-software/design-system/input/src/input.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<InputComponent>",
+                    "defaultValue": "{\n  component: InputComponent,\n  title: 'Components/Input',\n  tags: ['autodocs'],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n      table: {\n        defaultValue: { summary: 'Enter value' },\n      },\n    },\n  },\n  // render: ({ ...args }) => ({\n  //   props: args,\n  //   template: `\n  //     <iic-input label='Label' placeholder='Placeholder'}></iic-input>`,\n  // }),\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Primary Input',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
                 }
             ],
             "projects/makino-software/design-system/.storybook/preview.ts": [
@@ -142,6 +195,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ButtonComponent>",
                     "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/makino-software/design-system/input/src/input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<InputComponent>",
+                    "file": "projects/makino-software/design-system/input/src/input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -207,6 +273,36 @@
             },
             {
                 "filePath": "projects/makino-software/design-system/button/src/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/input/src/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/input/src/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/input/src/input.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

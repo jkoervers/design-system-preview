@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import * as InputStories from "./input.stories";
+
+# Input Component
+
+[Source code](https://github.com/MakinoMachine/X03500UICL/tree/main/projects/makino-software/design-system/input)
+&nbsp;|&nbsp;
+[Figma reference](https://www.figma.com/design/nI8zohmPpS3dTG5YX7Ua5b/Design-System?node-id=342-3359&node-type=frame&t=QmTQyxTy2xZCWJbw-0)
+&nbsp;|&nbsp;
+[Usage guidelines](#usage-guidelines)
+
+<Meta of={InputStories} name="Overview" />
+
+<Canvas>
+  <Story of={InputStories.Default} />
+</Canvas>
+
+## Getting started
+
+You can implement the input component by importing the `InputComponent` into the NgModule or standalone component of you angular app.
+
+```html
+import { InputComponent } from "@makino-software/design-system/input";
+```
+
+The input can be used in template-driven or reactive forms. The input has no required attribute. The default values are automatically set and can be seen in the _Component API_ section in the _Default_ table column.
+You can and should configure the label and placeholder property by specifying a string.
+
+To see how to integrate the input component click on _Show code_ in the fist canvas at the top of the page.
+
+## Usage guidelines
+
+It is a good idea to provide semantic labels and placeholders, that give the user an idea of the value that should be inserted into the input. Try to be more specific than `Name` for label or `Enter value` for placeholder,
+e.g. try using `First name` or `Enter first name`.
+
+## Component API
+
+<Controls />

@@ -1,0 +1,118 @@
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
+.input {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--iic-input-default-border-default);
+  border-radius: var(--radius-s, 8px);
+  color: var(--iic-text-default-color-default);
+  display: flex;
+  font-size: var(--text-m, 16px);
+  height: 50px;
+  padding: 11px var(--spacing-m, 16px);
+  position: relative;
+  width: 224px;
+
+  &.ng-dirty.ng-valid:focus-within {
+    border: 1px solid var(--iic-input-default-border-focus);
+
+    .input__label {
+      color: var(--iic-input-default-color-focus);
+    }
+
+    svg.input__svg>path {
+      fill: var(--iic-input-default-color-focus);
+    }
+  }
+
+  &.ng-dirty.ng-invalid {
+    border: 1px solid var(--input-error-border-default, #DE3431);
+
+    .input__label {
+      color: var(--input-error-color-default, #DE3431);
+    }
+
+    svg.input__svg>path {
+      fill: var(--input-error-color-default, #DE3431);
+    }
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    color: var(--iic-text-default-color-default);
+    font-size: var(--text-m, 16px);
+    outline: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px;
+    white-space: nowrap;
+    width: calc(100% - var(--spacing-l, 32px));
+
+    &:focus~.input__label,
+    &:not(:placeholder-shown)~.input__label {
+      background-color: var(--iic-input-default-background-default);
+      transform: translateY(-25px) translateX(2px) translate(0) scale(.75);
+      width: auto !important;
+    }
+
+    &:not(:focus)::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__label {
+    color: var(--iic-text-default-color-default);
+    left: 8px;
+    overflow: hidden;
+    padding: 0px var(--spacing-s, 8px);
+    pointer-events: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    top: 12px;
+    transform-origin: 0 50%;
+    transition:
+      transform 0.2s,
+      color 0.2s;
+    width: calc(100% - var(--text-m, 16px));
+  }
+
+  &__btn {
+    align-items: center;
+    background: transparent;
+    border: none;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    padding: 0px;
+    position: absolute;
+    right: var(--spacing-m, 16px);
+    top: 13px;
+    width: 24px;
+  }
+
+  &--disabled {
+    background-color: var(--iic-input-default-background-disabled);
+    border-color: var(--iic-input-default-border-disabled);
+
+    .input__label {
+      color: var(--text-default-color-disabled, #BEBEC4)
+    }
+  }
+
+  &--labeled {
+    margin-top: var(--spacing-s, 8px);
+  }
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+  display: none;
+}
+
+svg.input__svg>path {
+  fill: var(--iic-text-default-color-default);
+}

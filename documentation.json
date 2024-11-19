@@ -44,7 +44,7 @@
         },
         {
             "name": "LinkedToComponent",
-            "id": "component-LinkedToComponent-a6ac47a7d814c8afefddadeab8d00e6f1ce19b0ad66df62db090694370b72646b47f83de411baacfccaa96c189fcc0c8df489a36520e129f5f95dfdb17aeb22f",
+            "id": "component-LinkedToComponent-83bc849af1715697a14d60a31c29d20bc31418d38f0364d7eb94f51ffebafefc74ab50e457887691224bb3ed533689d33dc8bbae0839b678a0249398da59b00b",
             "file": "projects/makino-software/design-system/link/src/link.stories.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -70,7 +70,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import {\n  applicationConfig,\n  moduleMetadata,\n  type Meta,\n  type StoryObj,\n} from '@storybook/angular';\n\nimport { LinkComponent } from './link.component';\nimport { provideRouter, Routes, withHashLocation } from '@angular/router';\nimport { Component } from '@angular/core';\n\n@Component({\n  standalone: true,\n  template: `\n    <h1>Linked To</h1>\n    <p>This is the content of the page.</p>\n  `,\n})\nclass LinkedToComponent {}\n\nconst routes: Routes = [\n  {\n    path: 'linked-to',\n    loadComponent: () => LinkedToComponent,\n  },\n];\n\nconst meta: Meta<LinkComponent> = {\n  component: LinkComponent,\n  title: 'Components/Link',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [LinkedToComponent],\n    }),\n    applicationConfig({\n      providers: [provideRouter([...routes], withHashLocation())],\n    }),\n  ],\n};\nexport default meta;\ntype Story = StoryObj<LinkComponent>;\n\nexport const Default: Story = {\n  name: 'Link',\n  args: {\n    label: 'This is a link',\n    route: '/linked-to',\n  },\n};\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { provideRouter, Routes, withHashLocation } from '@angular/router';\nimport {\n  applicationConfig,\n  moduleMetadata,\n  type Meta,\n  type StoryObj,\n} from '@storybook/angular';\n\nimport { LinkComponent } from './link.component';\n\n@Component({\n  standalone: true,\n  template: `\n    <h1>Linked To</h1>\n    <p>This is the content of the page.</p>\n  `,\n})\nclass LinkedToComponent {}\n\nconst routes: Routes = [\n  {\n    path: 'linked-to',\n    loadComponent: () => LinkedToComponent,\n  },\n];\n\nconst meta: Meta<LinkComponent> = {\n  component: LinkComponent,\n  title: 'Components/Link',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [LinkedToComponent],\n    }),\n    applicationConfig({\n      providers: [provideRouter([...routes], withHashLocation())],\n    }),\n  ],\n};\nexport default meta;\ntype Story = StoryObj<LinkComponent>;\n\nexport const Default: Story = {\n  name: 'Link',\n  args: {\n    label: 'This is a link',\n    route: '/linked-to',\n  },\n};\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -216,6 +216,16 @@
                 "defaultValue": "{\n  component: LinkComponent,\n  title: 'Components/Link',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [LinkedToComponent],\n    }),\n    applicationConfig({\n      providers: [provideRouter([...routes], withHashLocation())],\n    }),\n  ],\n}"
             },
             {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<LoadingSpinnerComponent>",
+                "defaultValue": "{\n  component: LoadingSpinnerComponent,\n  title: 'LoadingSpinnerComponent',\n}"
+            },
+            {
                 "name": "parameters",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -244,6 +254,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  name: 'Primary Button',\n  args: {\n    color: 'primary',\n    variant: 'solid',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {},\n}"
             },
             {
                 "name": "Secondary",
@@ -308,6 +328,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<LinkComponent>",
                 "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<LoadingSpinnerComponent>",
+                "file": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -446,6 +477,28 @@
                     "defaultValue": "{\n  args: {\n    ...Primary.args,\n    color: 'secondary',\n  },\n}"
                 }
             ],
+            "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<LoadingSpinnerComponent>",
+                    "defaultValue": "{\n  component: LoadingSpinnerComponent,\n  title: 'LoadingSpinnerComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {},\n}"
+                }
+            ],
             "projects/makino-software/design-system/.storybook/preview.ts": [
                 {
                     "name": "parameters",
@@ -531,6 +584,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<LinkComponent>",
                     "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<LoadingSpinnerComponent>",
+                    "file": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -753,6 +819,36 @@
             },
             {
                 "filePath": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

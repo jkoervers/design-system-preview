@@ -13,6 +13,10 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      default: 'makino-background',
+      values: [{ name: 'makino-background', value: '#ECEFF3' }],
+    },
   },
 };
 
@@ -26,7 +30,7 @@ export const parameters: Parameters = {
         'Install and Configure',
         'Changelog',
         'Components',
-        ['Button'],
+        ['Breadcrumb', 'Button', 'Input'],
         'Utilities',
         [
           'Helper Functions',

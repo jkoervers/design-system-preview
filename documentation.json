@@ -43,6 +43,40 @@
             "extends": []
         },
         {
+            "name": "LinkedToComponent",
+            "id": "component-LinkedToComponent-a6ac47a7d814c8afefddadeab8d00e6f1ce19b0ad66df62db090694370b72646b47f83de411baacfccaa96c189fcc0c8df489a36520e129f5f95dfdb17aeb22f",
+            "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "styleUrls": [],
+            "styles": [],
+            "template": "<h1>Linked To</h1>\n<p>This is the content of the page.</p>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import {\n  applicationConfig,\n  moduleMetadata,\n  type Meta,\n  type StoryObj,\n} from '@storybook/angular';\n\nimport { LinkComponent } from './link.component';\nimport { provideRouter, Routes, withHashLocation } from '@angular/router';\nimport { Component } from '@angular/core';\n\n@Component({\n  standalone: true,\n  template: `\n    <h1>Linked To</h1>\n    <p>This is the content of the page.</p>\n  `,\n})\nclass LinkedToComponent {}\n\nconst routes: Routes = [\n  {\n    path: 'linked-to',\n    loadComponent: () => LinkedToComponent,\n  },\n];\n\nconst meta: Meta<LinkComponent> = {\n  component: LinkComponent,\n  title: 'Components/Link',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [LinkedToComponent],\n    }),\n    applicationConfig({\n      providers: [provideRouter([...routes], withHashLocation())],\n    }),\n  ],\n};\nexport default meta;\ntype Story = StoryObj<LinkComponent>;\n\nexport const Default: Story = {\n  name: 'Link',\n  args: {\n    label: 'This is a link',\n    route: '/linked-to',\n  },\n};\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
             "name": "SecondStoryContentComponent",
             "id": "component-SecondStoryContentComponent-c7641aa5754a41dc9c6d38edcaecb634ab744b36e54362478e6b64f2eb55829726c34628f419b92452fc50206e483b71a8a89825a15815b87e893d8916068a49",
             "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
@@ -122,6 +156,16 @@
                 "defaultValue": "{\n  name: 'Default Input',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Link',\n  args: {\n    label: 'This is a link',\n    route: '/linked-to',\n  },\n}"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -129,7 +173,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BadgeComponent>",
-                "defaultValue": "{\n  component: BadgeComponent,\n  title: 'BadgeComponent',\n  tags: ['autodocs'],\n}"
+                "defaultValue": "{\n  component: BadgeComponent,\n  title: 'Components/Badge',\n  tags: ['autodocs'],\n}"
             },
             {
                 "name": "meta",
@@ -162,6 +206,16 @@
                 "defaultValue": "{\n  component: InputComponent,\n  title: 'Components/Input',\n  tags: ['autodocs'],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n      table: {\n        defaultValue: { summary: 'Enter value' },\n      },\n    },\n  },\n  // render: ({ ...args }) => ({\n  //   props: args,\n  //   template: `\n  //     <iic-input label='Label' placeholder='Placeholder'}></iic-input>`,\n  // }),\n}"
             },
             {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<LinkComponent>",
+                "defaultValue": "{\n  component: LinkComponent,\n  title: 'Components/Link',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [LinkedToComponent],\n    }),\n    applicationConfig({\n      providers: [provideRouter([...routes], withHashLocation())],\n    }),\n  ],\n}"
+            },
+            {
                 "name": "parameters",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -169,7 +223,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Parameters",
-                "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Breadcrumb', 'Button', 'Input'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+                "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Badge', 'Breadcrumb', 'Button', 'Input', 'Link'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -247,6 +301,17 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<LinkComponent>",
+                "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             }
         ],
         "enumerations": [],
@@ -302,7 +367,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BadgeComponent>",
-                    "defaultValue": "{\n  component: BadgeComponent,\n  title: 'BadgeComponent',\n  tags: ['autodocs'],\n}"
+                    "defaultValue": "{\n  component: BadgeComponent,\n  title: 'Components/Badge',\n  tags: ['autodocs'],\n}"
                 }
             ],
             "projects/makino-software/design-system/input/src/input.stories.ts": [
@@ -325,6 +390,28 @@
                     "deprecationMessage": "",
                     "type": "Meta<InputComponent>",
                     "defaultValue": "{\n  component: InputComponent,\n  title: 'Components/Input',\n  tags: ['autodocs'],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n      table: {\n        defaultValue: { summary: 'Enter value' },\n      },\n    },\n  },\n  // render: ({ ...args }) => ({\n  //   props: args,\n  //   template: `\n  //     <iic-input label='Label' placeholder='Placeholder'}></iic-input>`,\n  // }),\n}"
+                }
+            ],
+            "projects/makino-software/design-system/link/src/link.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Link',\n  args: {\n    label: 'This is a link',\n    route: '/linked-to',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/link/src/link.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<LinkComponent>",
+                    "defaultValue": "{\n  component: LinkComponent,\n  title: 'Components/Link',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [LinkedToComponent],\n    }),\n    applicationConfig({\n      providers: [provideRouter([...routes], withHashLocation())],\n    }),\n  ],\n}"
                 }
             ],
             "projects/makino-software/design-system/button/src/button.stories.ts": [
@@ -368,7 +455,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Parameters",
-                    "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Breadcrumb', 'Button', 'Input'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+                    "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Badge', 'Breadcrumb', 'Button', 'Input', 'Link'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
                 },
                 {
                     "name": "preview",
@@ -431,6 +518,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<InputComponent>",
                     "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/makino-software/design-system/link/src/link.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<LinkComponent>",
+                    "file": "projects/makino-software/design-system/link/src/link.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -614,6 +714,45 @@
             },
             {
                 "filePath": "projects/makino-software/design-system/input/src/input.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LinkedToComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/link/src/link.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/link/src/link.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

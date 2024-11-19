@@ -30,7 +30,7 @@ export const parameters: Parameters = {
         'Install and Configure',
         'Changelog',
         'Components',
-        ['Badge', 'Breadcrumb', 'Button', 'Input'],
+        ['Badge', 'Breadcrumb', 'Button', 'Input', 'Link'],
         'Utilities',
         [
           'Helper Functions',

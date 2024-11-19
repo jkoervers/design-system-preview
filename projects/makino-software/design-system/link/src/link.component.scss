@@ -1,0 +1,11 @@
+.link {
+    color: var(--text-primary-color-default, #2F8ECA);
+}
+
+.link:hover {
+    color: var(--text-primary-color-hover, #47A3DE);
+}
+
+.link--active {
+    color: var(--text-primary-color-focus, #167FC2);
+}

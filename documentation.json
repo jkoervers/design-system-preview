@@ -6,10 +6,101 @@
     "interceptors": [],
     "classes": [],
     "directives": [],
-    "components": [],
+    "components": [
+        {
+            "name": "FirstStoryContentComponent",
+            "id": "component-FirstStoryContentComponent-d7e4ff9645f34ba6298e31147a61a07f7f6b3395789133bc8b2f440222f19a39881d0ccf5be8d5e6c67c1d7759dbc2f78a7d40baa661287fe8a76fe646375f14",
+            "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "tab1",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<h1>First Tab</h1>\n<p>This is the content of the first tab</p>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\nimport { provideRouter, Router, RouterModule, Routes } from '@angular/router';\nimport {\n  applicationConfig,\n  componentWrapperDecorator,\n  moduleMetadata,\n  type Meta,\n  type StoryObj,\n} from '@storybook/angular';\n\nimport { BreadcrumbComponent } from './breadcrumb.component';\nimport { Breadcrumb } from './breadcrumb.type';\nimport { APP_BASE_HREF } from '@angular/common';\n\n@Component({\n  standalone: true,\n  selector: 'tab1',\n  template: `\n    <h1>First Tab</h1>\n    <p>This is the content of the first tab</p>\n  `,\n})\nclass FirstStoryContentComponent {}\n\n@Component({\n  standalone: true,\n  selector: 'tab2',\n  template: `\n    <h1>Second Tab</h1>\n    <p>This is the content of the second tab</p>\n  `,\n})\nclass SecondStoryContentComponent {}\n\nconst routes: Routes = [\n  {\n    path: '**',\n    redirectTo: 'tab2',\n    pathMatch: 'full',\n  },\n  {\n    path: 'tab1',\n    loadComponent: () => FirstStoryContentComponent,\n  },\n  {\n    path: 'tab2',\n    loadComponent: () => SecondStoryContentComponent,\n  },\n];\n\nconst breadcrumbs: Breadcrumb[] = [\n  { label: 'Level 1', route: '/tab1' },\n  { label: 'Level 2', route: '/tab2' },\n];\n\nconst meta: Meta<BreadcrumbComponent> = {\n  component: BreadcrumbComponent,\n  title: 'Components/Breadcrumb',\n  tags: ['autodocs'],\n  argTypes: {\n    breadcrumbs: {\n      control: { type: 'object' },\n    },\n  },\n  decorators: [\n    moduleMetadata({\n      imports: [\n        RouterModule,\n        FirstStoryContentComponent,\n        SecondStoryContentComponent,\n      ],\n    }),\n    applicationConfig({\n      providers: [\n        provideRouter(routes),\n        {\n          provide: APP_BASE_HREF,\n          useValue: '/',\n        },\n      ],\n    }),\n    componentWrapperDecorator((story) => `${story}`),\n  ],\n  render: ({ ...args }) => ({\n    props: {\n      ...args,\n      navigate: (url: string) => {\n        inject(Router).navigateByUrl(url);\n      },\n    },\n    // template:\n    //   `\n    //     <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n    //     <router-outlet></router-outlet>\n    //   `,\n    template: `\n        <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n      `,\n  }),\n};\n\nexport default meta;\ntype Story = StoryObj<BreadcrumbComponent>;\n\nexport const Primary: Story = {\n  name: 'Primary Breadcrumb',\n  args: {\n    breadcrumbs: breadcrumbs,\n  },\n};\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "SecondStoryContentComponent",
+            "id": "component-SecondStoryContentComponent-d7e4ff9645f34ba6298e31147a61a07f7f6b3395789133bc8b2f440222f19a39881d0ccf5be8d5e6c67c1d7759dbc2f78a7d40baa661287fe8a76fe646375f14",
+            "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "tab2",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<h1>Second Tab</h1>\n<p>This is the content of the second tab</p>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\nimport { provideRouter, Router, RouterModule, Routes } from '@angular/router';\nimport {\n  applicationConfig,\n  componentWrapperDecorator,\n  moduleMetadata,\n  type Meta,\n  type StoryObj,\n} from '@storybook/angular';\n\nimport { BreadcrumbComponent } from './breadcrumb.component';\nimport { Breadcrumb } from './breadcrumb.type';\nimport { APP_BASE_HREF } from '@angular/common';\n\n@Component({\n  standalone: true,\n  selector: 'tab1',\n  template: `\n    <h1>First Tab</h1>\n    <p>This is the content of the first tab</p>\n  `,\n})\nclass FirstStoryContentComponent {}\n\n@Component({\n  standalone: true,\n  selector: 'tab2',\n  template: `\n    <h1>Second Tab</h1>\n    <p>This is the content of the second tab</p>\n  `,\n})\nclass SecondStoryContentComponent {}\n\nconst routes: Routes = [\n  {\n    path: '**',\n    redirectTo: 'tab2',\n    pathMatch: 'full',\n  },\n  {\n    path: 'tab1',\n    loadComponent: () => FirstStoryContentComponent,\n  },\n  {\n    path: 'tab2',\n    loadComponent: () => SecondStoryContentComponent,\n  },\n];\n\nconst breadcrumbs: Breadcrumb[] = [\n  { label: 'Level 1', route: '/tab1' },\n  { label: 'Level 2', route: '/tab2' },\n];\n\nconst meta: Meta<BreadcrumbComponent> = {\n  component: BreadcrumbComponent,\n  title: 'Components/Breadcrumb',\n  tags: ['autodocs'],\n  argTypes: {\n    breadcrumbs: {\n      control: { type: 'object' },\n    },\n  },\n  decorators: [\n    moduleMetadata({\n      imports: [\n        RouterModule,\n        FirstStoryContentComponent,\n        SecondStoryContentComponent,\n      ],\n    }),\n    applicationConfig({\n      providers: [\n        provideRouter(routes),\n        {\n          provide: APP_BASE_HREF,\n          useValue: '/',\n        },\n      ],\n    }),\n    componentWrapperDecorator((story) => `${story}`),\n  ],\n  render: ({ ...args }) => ({\n    props: {\n      ...args,\n      navigate: (url: string) => {\n        inject(Router).navigateByUrl(url);\n      },\n    },\n    // template:\n    //   `\n    //     <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n    //     <router-outlet></router-outlet>\n    //   `,\n    template: `\n        <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n      `,\n  }),\n};\n\nexport default meta;\ntype Story = StoryObj<BreadcrumbComponent>;\n\nexport const Primary: Story = {\n  name: 'Primary Breadcrumb',\n  args: {\n    breadcrumbs: breadcrumbs,\n  },\n};\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        }
+    ],
     "modules": [],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "breadcrumbs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Breadcrumb[]",
+                "defaultValue": "[\n  { label: 'Level 1', route: '/tab1' },\n  { label: 'Level 2', route: '/tab2' },\n]"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Default Input',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
+            },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
@@ -19,6 +110,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
                 "defaultValue": "{\n  component: ButtonComponent,\n  title: 'Components/Button',\n  tags: ['autodocs'],\n  argTypes: {\n    color: {\n      options: ['default', 'blank', 'primary', 'secondary'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'default' },\n      },\n    },\n    variant: {\n      options: ['solid', 'outlined', 'flat'],\n      control: { type: 'radio' },\n      table: {\n        defaultValue: { summary: 'solid' },\n      },\n    },\n  },\n  render: ({ ...args }) => ({\n    props: args,\n    template: `\n      <button iic-button ${argsToTemplate(args)}>\n        Click me\n      </button>`,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BreadcrumbComponent>",
+                "defaultValue": "{\n  component: BreadcrumbComponent,\n  title: 'Components/Breadcrumb',\n  tags: ['autodocs'],\n  argTypes: {\n    breadcrumbs: {\n      control: { type: 'object' },\n    },\n  },\n  decorators: [\n    moduleMetadata({\n      imports: [\n        RouterModule,\n        FirstStoryContentComponent,\n        SecondStoryContentComponent,\n      ],\n    }),\n    applicationConfig({\n      providers: [\n        provideRouter(routes),\n        {\n          provide: APP_BASE_HREF,\n          useValue: '/',\n        },\n      ],\n    }),\n    componentWrapperDecorator((story) => `${story}`),\n  ],\n  render: ({ ...args }) => ({\n    props: {\n      ...args,\n      navigate: (url: string) => {\n        inject(Router).navigateByUrl(url);\n      },\n    },\n    // template:\n    //   `\n    //     <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n    //     <router-outlet></router-outlet>\n    //   `,\n    template: `\n        <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n      `,\n  }),\n}"
             },
             {
                 "name": "meta",
@@ -38,7 +139,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Parameters",
-                "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Button'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+                "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Breadcrumb', 'Button', 'Input'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -48,7 +149,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    backgrounds: {\n      default: 'makino-background',\n      values: [{ name: 'makino-background', value: '#ECEFF3' }],\n    },\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -64,11 +165,11 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  name: 'Primary Input',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
+                "defaultValue": "{\n  name: 'Primary Breadcrumb',\n  args: {\n    breadcrumbs: breadcrumbs,\n  },\n}"
             },
             {
                 "name": "Secondary",
@@ -98,6 +199,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<BreadcrumbComponent>",
+                "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<InputComponent>",
                 "file": "projects/makino-software/design-system/input/src/input.stories.ts",
                 "deprecated": false,
@@ -108,6 +220,60 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts": [
+                {
+                    "name": "breadcrumbs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Breadcrumb[]",
+                    "defaultValue": "[\n  { label: 'Level 1', route: '/tab1' },\n  { label: 'Level 2', route: '/tab2' },\n]"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<BreadcrumbComponent>",
+                    "defaultValue": "{\n  component: BreadcrumbComponent,\n  title: 'Components/Breadcrumb',\n  tags: ['autodocs'],\n  argTypes: {\n    breadcrumbs: {\n      control: { type: 'object' },\n    },\n  },\n  decorators: [\n    moduleMetadata({\n      imports: [\n        RouterModule,\n        FirstStoryContentComponent,\n        SecondStoryContentComponent,\n      ],\n    }),\n    applicationConfig({\n      providers: [\n        provideRouter(routes),\n        {\n          provide: APP_BASE_HREF,\n          useValue: '/',\n        },\n      ],\n    }),\n    componentWrapperDecorator((story) => `${story}`),\n  ],\n  render: ({ ...args }) => ({\n    props: {\n      ...args,\n      navigate: (url: string) => {\n        inject(Router).navigateByUrl(url);\n      },\n    },\n    // template:\n    //   `\n    //     <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n    //     <router-outlet></router-outlet>\n    //   `,\n    template: `\n        <iic-breadcrumb [breadcrumbs]=\"breadcrumbs\"></iic-breadcrumb>\n      `,\n  }),\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Primary Breadcrumb',\n  args: {\n    breadcrumbs: breadcrumbs,\n  },\n}"
+                }
+            ],
+            "projects/makino-software/design-system/input/src/input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Default Input',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/input/src/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<InputComponent>",
+                    "defaultValue": "{\n  component: InputComponent,\n  title: 'Components/Input',\n  tags: ['autodocs'],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n      table: {\n        defaultValue: { summary: 'Enter value' },\n      },\n    },\n  },\n  // render: ({ ...args }) => ({\n  //   props: args,\n  //   template: `\n  //     <iic-input label='Label' placeholder='Placeholder'}></iic-input>`,\n  // }),\n}"
+                }
+            ],
             "projects/makino-software/design-system/button/src/button.stories.ts": [
                 {
                     "name": "meta",
@@ -140,28 +306,6 @@
                     "defaultValue": "{\n  args: {\n    ...Primary.args,\n    color: 'secondary',\n  },\n}"
                 }
             ],
-            "projects/makino-software/design-system/input/src/input.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/makino-software/design-system/input/src/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<InputComponent>",
-                    "defaultValue": "{\n  component: InputComponent,\n  title: 'Components/Input',\n  tags: ['autodocs'],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n      table: {\n        defaultValue: { summary: 'Enter value' },\n      },\n    },\n  },\n  // render: ({ ...args }) => ({\n  //   props: args,\n  //   template: `\n  //     <iic-input label='Label' placeholder='Placeholder'}></iic-input>`,\n  // }),\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/makino-software/design-system/input/src/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  name: 'Primary Input',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
-                }
-            ],
             "projects/makino-software/design-system/.storybook/preview.ts": [
                 {
                     "name": "parameters",
@@ -171,7 +315,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Parameters",
-                    "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Button'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+                    "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Breadcrumb', 'Button', 'Input'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
                 },
                 {
                     "name": "preview",
@@ -181,7 +325,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    backgrounds: {\n      default: 'makino-background',\n      values: [{ name: 'makino-background', value: '#ECEFF3' }],\n    },\n  },\n}"
                 }
             ]
         },
@@ -195,6 +339,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ButtonComponent>",
                     "file": "projects/makino-software/design-system/button/src/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BreadcrumbComponent>",
+                    "file": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -237,6 +394,64 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FirstStoryContentComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SecondStoryContentComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "breadcrumbs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/breadcrumb/src/breadcrumb.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -286,7 +501,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "meta",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -296,7 +511,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

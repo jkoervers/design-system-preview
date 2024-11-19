@@ -1,0 +1,25 @@
+:host {
+    align-items: center;
+    background-color: var(--iic-breadcrumb-default-background-default, #FFFFFF);
+    border-radius: var(--radius-m, 16px);
+    display: flex;
+    height: 48px;
+    padding: var(--spacing-s, 8px) var(--spacing-m, 16px);
+}
+
+.breadcrumb__link {
+    color: var(---iic-text-default-color-default);
+    text-decoration: none;
+}
+
+.breadcrumb__link:hover {
+    color: var(--iic-text-primary-color-default);
+}
+
+.breadcrumb__link--active {
+    color: var(--iic-text-primary-color-focus);
+}
+
+svg.breadcrumb__svg>path {
+    fill: var(--iic-text-default-color-default);
+}

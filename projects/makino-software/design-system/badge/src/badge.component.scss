@@ -1,0 +1,18 @@
+@import "../../assets/styles/spacing";
+@import "../../assets/styles/radius";
+
+:host {
+    align-items: center;
+    background-color: #DF1313;
+    border-radius: $radius-04;
+    color: #fff;
+    display: flex;
+    font-size: 10px !important;
+    font-weight: normal !important;
+    height: $spacing-05;
+    justify-content: center;
+    line-height: normal !important;
+    min-width: $spacing-05;
+    padding: 0px $spacing-02;
+    width: fit-content;
+}

@@ -27,8 +27,8 @@ const meta: Meta<InputComponent> = {
 export default meta;
 type Story = StoryObj<InputComponent>;
 
-export const Primary: Story = {
-  name: 'Primary Input',
+export const Default: Story = {
+  name: 'Default Input',
   args: {
     label: 'Label',
     placeholder: 'Placeholder',

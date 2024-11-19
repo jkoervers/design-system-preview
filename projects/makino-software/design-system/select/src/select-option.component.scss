@@ -1,0 +1,29 @@
+:host {
+    position: relative;
+    display: flex;
+    padding: 0px var(--spacing-md, 16px);
+    align-items: flex-start;
+}
+
+.option {
+    align-items: center;
+    display: flex;
+    flex: 1 0 0;
+    padding: var(--spacing-s, 8px) var(--spacing-m, 16px);
+}
+
+.option:hover,
+.option--selected {
+    background: var(--iic-select-option-default-background-hover);
+    border-radius: var(--radius-small, 4px);
+}
+
+.indicator {
+    background-color: var(--iic-select-indicator-default-backgorund-default);
+    border-bottom-right-radius: var(--radius-small, 4px);
+    border-top-right-radius: var(--radius-small, 4px);
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    width: 4px;
+}

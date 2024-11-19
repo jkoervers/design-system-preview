@@ -1,0 +1,11 @@
+@if (select.value === value()) {
+  <span class="indicator"></span>
+}
+
+<span
+  class="option"
+  [ngClass]="{ 'option--selected': select.value === value() }"
+  #option
+>
+  <ng-content></ng-content>
+</span>

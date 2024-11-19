@@ -166,6 +166,16 @@
                 "defaultValue": "{\n  name: 'Link',\n  args: {\n    label: 'This is a link',\n    route: '/linked-to',\n  },\n}"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/select/src/select.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  name: 'Select',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -223,7 +233,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<LoadingSpinnerComponent>",
-                "defaultValue": "{\n  component: LoadingSpinnerComponent,\n  title: 'LoadingSpinnerComponent',\n}"
+                "defaultValue": "{\n  component: LoadingSpinnerComponent,\n  title: 'Components/Loading Spinner',\n  tags: ['autodocs'],\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/makino-software/design-system/select/src/select.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SelectComponent>",
+                "defaultValue": "{\n  component: SelectComponent,\n  title: 'Components/Select',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [\n        CommonModule,\n        PortalModule,\n        SelectComponent,\n        SelectOptionComponent,\n      ],\n    }),\n  ],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n    },\n  },\n  render: ({ ...args }) => ({\n    props: args,\n    template: `\n      <iic-select ${argsToTemplate(args)}>\n        <iic-select-option value=\"option1\">Option 1</iic-select-option>\n        <iic-select-option value=\"option2\">Option 2</iic-select-option>\n        <iic-select-option value=\"option3\">Option 3</iic-select-option>\n      </iic-select>`,\n  }),\n}"
             },
             {
                 "name": "parameters",
@@ -233,7 +253,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Parameters",
-                "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Badge', 'Breadcrumb', 'Button', 'Input', 'Link'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+                "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        [\n          'Badge',\n          'Breadcrumb',\n          'Button',\n          'Input',\n          'Link',\n          'Loading Spinner',\n          'Select',\n        ],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n        'Contributing',\n        'License',\n        'Todo',\n      ],\n    },\n  },\n}"
             },
             {
                 "name": "preview",
@@ -343,6 +363,17 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SelectComponent>",
+                "file": "projects/makino-software/design-system/select/src/select.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             }
         ],
         "enumerations": [],
@@ -445,6 +476,28 @@
                     "defaultValue": "{\n  component: LinkComponent,\n  title: 'Components/Link',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [LinkedToComponent],\n    }),\n    applicationConfig({\n      providers: [provideRouter([...routes], withHashLocation())],\n    }),\n  ],\n}"
                 }
             ],
+            "projects/makino-software/design-system/select/src/select.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/select/src/select.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  name: 'Select',\n  args: {\n    label: 'Label',\n    placeholder: 'Placeholder',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/makino-software/design-system/select/src/select.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SelectComponent>",
+                    "defaultValue": "{\n  component: SelectComponent,\n  title: 'Components/Select',\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      imports: [\n        CommonModule,\n        PortalModule,\n        SelectComponent,\n        SelectOptionComponent,\n      ],\n    }),\n  ],\n  argTypes: {\n    label: {\n      control: { type: 'text' },\n    },\n    placeholder: {\n      control: { type: 'text' },\n    },\n  },\n  render: ({ ...args }) => ({\n    props: args,\n    template: `\n      <iic-select ${argsToTemplate(args)}>\n        <iic-select-option value=\"option1\">Option 1</iic-select-option>\n        <iic-select-option value=\"option2\">Option 2</iic-select-option>\n        <iic-select-option value=\"option3\">Option 3</iic-select-option>\n      </iic-select>`,\n  }),\n}"
+                }
+            ],
             "projects/makino-software/design-system/button/src/button.stories.ts": [
                 {
                     "name": "meta",
@@ -486,7 +539,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<LoadingSpinnerComponent>",
-                    "defaultValue": "{\n  component: LoadingSpinnerComponent,\n  title: 'LoadingSpinnerComponent',\n}"
+                    "defaultValue": "{\n  component: LoadingSpinnerComponent,\n  title: 'Components/Loading Spinner',\n  tags: ['autodocs'],\n}"
                 },
                 {
                     "name": "Primary",
@@ -508,7 +561,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Parameters",
-                    "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        ['Badge', 'Breadcrumb', 'Button', 'Input', 'Link'],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n      ],\n    },\n  },\n}"
+                    "defaultValue": "{\n  options: {\n    storySort: {\n      order: [\n        'Introduction',\n        'Install and Configure',\n        'Changelog',\n        'Components',\n        [\n          'Badge',\n          'Breadcrumb',\n          'Button',\n          'Input',\n          'Link',\n          'Loading Spinner',\n          'Select',\n        ],\n        'Utilities',\n        [\n          'Helper Functions',\n          'Service Mocking',\n          'Directives',\n          'Pipes',\n          'Tokens and Theming',\n          'Layout Helpers',\n        ],\n        'Decisions',\n        ['adr-template', 'adr-24-11-15'],\n        'Contributing',\n        'License',\n        'Todo',\n      ],\n    },\n  },\n}"
                 },
                 {
                     "name": "preview",
@@ -597,6 +650,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<LoadingSpinnerComponent>",
                     "file": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/makino-software/design-system/select/src/select.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SelectComponent>",
+                    "file": "projects/makino-software/design-system/select/src/select.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -849,6 +915,36 @@
             },
             {
                 "filePath": "projects/makino-software/design-system/loading-spinner/src/loading-spinner.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/select/src/select.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/select/src/select.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/makino-software/design-system/select/src/select.component.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

@@ -1,0 +1,44 @@
+@if (value) {
+  <div *ngIf="value" class="select__value">
+    {{ viewValue }}
+  </div>
+}
+
+<label
+  class="select__label"
+  [ngClass]="{ 'select__label--option-selected': value }"
+>
+  {{ label() }}
+</label>
+
+<!-- 
+  wenn ins select geklickt wird, dann label hoch und placeholder anzeigen
+-->
+
+<span
+  class="select__placeholder"
+  [ngClass]="{ 'select__placeholder--option-selected': value }"
+>
+  {{ placeholder() }}
+</span>
+
+<button class="select__arrow-btn" type="button" (click)="showOptions($event)">
+  <svg
+    class="select__svg"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 15.6558L5.5 9.15579L6.66458 7.99121L12 13.3537L17.3354 8.01829L18.5 9.18288L12 15.6558Z"
+    />
+  </svg>
+</button>
+
+<ng-template cdk-portal #overlayTemplate="cdkPortal">
+  <!-- TODO @julia remove shape, square should be standard and only allowed shape -->
+  <div class="select__options" [ngClass]="'select--square'">
+    <ng-content select="iic-select-option"></ng-content>
+  </div>
+</ng-template>
